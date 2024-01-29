@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Web Components</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="wrapper">
+      <h1 id="logo">Web Components Practice</h1>
+    </header>
+    <div class="wrapper">
+      <blog-post-list id="blog-posts">
+        <h2 slot="heading">Latest Posts</h2>
+      </blog-post-list>
+    </div>
+
+    <hr />
+    <div class="center-wrapper">
+      <button is="z-button">Shrey Z Button</button>
+      <button style="margin: 1rem">Shrey Normal Button</button>
+    </div>
+
+    <hr />
+    <div class="center-wrapper">
+      <todo-item>Todo 1</todo-item>
+      <todo-item>Todo 2</todo-item>
+      <todo-item checked>Strong JS understanding</todo-item>
+      <todo-item checked
+        >Quick learner and consistent performer</todo-item
+      >
+    </div>
+    <hr />
+    <div class="center-wrapper">
+      <ul is="expandable-list" data-expanded>
+        <li>List Item One</li>
+        <li>List Item Two</li>
+        <li>List Item Three</li>
+        <ul is="expandable-list">
+          <li>List Item One</li>
+          <ul is="expandable-list">
+            <li>List Item One</li>
+            <li>List Item Two</li>
+            <li>List Item Three</li>
+          </ul>
+          <li>List Item Two</li>
+          <li>List Item Three</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>Normal List Item One</li>
+        <li>Normal List Item Two</li>
+        <li>Normal List Item Three</li>
+      </ul>
+    </div>
+
+    <script src="apps.js" type="module"></script>
+  </body>
+</html>
